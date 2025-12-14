@@ -10,6 +10,7 @@ const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 const pageNumbers = document.getElementById("page-numbers");
 const pageLinks = document.querySelectorAll(".page-link");
+const emptyState = document.getElementById("empty-state");
 
 const incomeList = JSON.parse(localStorage.getItem("income")) || [];
 const expenseList = JSON.parse(localStorage.getItem("expense")) || [];
@@ -81,6 +82,21 @@ function setupPagination() {
 
   displayPage(currentPage, listItems);
   updatePagination();
+}
+
+function updateUIState() {
+  const listItems = list.children.length;
+
+  if (listItems === 0) {
+    pagination.style.display = "none";
+    emptyState.style.display = "block";
+    return;
+  }
+
+  emptyState.style.display = "none";
+
+  // show pagination only if needed
+  pagination.style.display = listItems > listPerPage ? "flex" : "none";
 }
 
 // Form submission handler
@@ -158,6 +174,7 @@ function renderTransactions() {
     list.appendChild(li);
   });
 
+  updateUIState();
   setupPagination();
 }
 
