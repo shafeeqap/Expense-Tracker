@@ -111,6 +111,14 @@ header {
     text-transform: capitalize;
 }
 
+.pagination-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .pagination {
     text-align: center;
     margin-top: 2rem;
