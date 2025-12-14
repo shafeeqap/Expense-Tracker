@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    background-color: #e2e2e2;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.wrapper {
+    padding: 10px 0 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    padding: 20px 20px 40px 20px;
+    margin-top: 20px;
+}
+
+.display-exp {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    gap: 10px;
+}
+
+.card-exp {
+    background-color: rgb(245, 194, 194);
+}
+
+.card-exp .minus {
+    color: red;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.card-inc .plus {
+    color: green;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.card-inc {
+    background-color: rgb(194, 245, 200);
+}
+
+.form-control {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label {
+    margin-bottom: 5px;
+}
+
+.amount-label {
+    font-size: 14px;
+}
+
+.form-control input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.list {
+    text-transform: capitalize;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.pagination a {
+    color: #45a049;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #45a049;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+.pagination a:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.pagination .active {
+    background-color: #45a049;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .display-exp {
+        flex-direction: column;
+        gap: 0;
+
+    }
+
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .pagination a {
+        padding: 6px 10px;
+        margin: 0 3px;
+    }
+}
