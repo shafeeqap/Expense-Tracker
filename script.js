@@ -11,6 +11,7 @@ const nextButton = document.getElementById("next");
 const pageNumbers = document.getElementById("page-numbers");
 const pageLinks = document.querySelectorAll(".page-link");
 const emptyState = document.getElementById("empty-state");
+const paginationContainer = document.getElementById("pagination-container");
 
 const incomeList = JSON.parse(localStorage.getItem("income")) || [];
 const expenseList = JSON.parse(localStorage.getItem("expense")) || [];
@@ -90,6 +91,7 @@ function updateUIState() {
   if (listItems === 0) {
     pagination.style.display = "none";
     emptyState.style.display = "block";
+    paginationContainer.style.display = "none"
     return;
   }
 
