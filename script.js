@@ -91,7 +91,7 @@ function updateUIState() {
   if (listItems === 0) {
     pagination.style.display = "none";
     emptyState.style.display = "block";
-    paginationContainer.style.display = "none"
+    paginationContainer.style.display = "none";
     return;
   }
 
@@ -99,6 +99,7 @@ function updateUIState() {
 
   // show pagination only if needed
   pagination.style.display = listItems > listPerPage ? "flex" : "none";
+  pageNumbers.style.display = listItems > listPerPage ? "flex" : "none";
 }
 
 // Form submission handler
